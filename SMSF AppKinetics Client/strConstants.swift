@@ -20,9 +20,13 @@ import Foundation
  
  */
 
-struct constants {
-    let kImportContact          = "com.swyftmobile.smsf.create-contact"
-    let kImportDocument         = "com.swyftmobile.smsf.create-document"
-    let kImportNote             = "com.swyftmobile.smsf.create-note"
-    let kSaveEditedFileService  = "com.good.gdservice.save-edited-file"
+public struct strConstants {
+    static let kImportContact          = "com.swyftmobile.smsf.create-contact"
+    static let kImportDocument         = "com.swyftmobile.smsf.create-document"
+    static let kImportNote             = "com.swyftmobile.smsf.create-note"
+    static let kSaveEditedFileService  = "com.good.gdservice.save-edited-file"
+    
+    static let kSaveEditMethod         = "saveEdit"; // method for saving edited file in client app
+    static let kEditFileMethod         = "editFile"; // method for editing file in service app
+    static let kImportMethod           = "importFile";
 }

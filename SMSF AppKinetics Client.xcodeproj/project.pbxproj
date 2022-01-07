@@ -24,7 +24,8 @@
 		6DB97E5126B49ED30029B91B /* HTTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB97E5026B49ED30029B91B /* HTTPView.swift */; };
 		6DB97E5326B49F4F0029B91B /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB97E5226B49F4F0029B91B /* SocketView.swift */; };
 		6DB97E5526B49F590029B91B /* DatabaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB97E5426B49F590029B91B /* DatabaseView.swift */; };
-		B2270D2C2788952D00E4E304 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2270D2B2788952D00E4E304 /* Constants.swift */; };
+		B2270D2C2788952D00E4E304 /* strConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2270D2B2788952D00E4E304 /* strConstants.swift */; };
+		B2A5BBE32788B85E009F8BDA /* AppKineticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,8 @@
 		6DB97E5226B49F4F0029B91B /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
 		6DB97E5426B49F590029B91B /* DatabaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseView.swift; sourceTree = "<group>"; };
 		7384A4F986C59C564B045741 /* Pods_Dynamics_SwiftUI_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dynamics_SwiftUI_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2270D2B2788952D00E4E304 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B2270D2B2788952D00E4E304 /* strConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strConstants.swift; sourceTree = "<group>"; };
+		B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKineticsController.swift; sourceTree = "<group>"; };
 		ED337647726023A9F7E6F7CA /* Pods-Dynamics SwiftUI Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dynamics SwiftUI Sample.debug.xcconfig"; path = "Target Support Files/Pods-Dynamics SwiftUI Sample/Pods-Dynamics SwiftUI Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +121,8 @@
 				6DB97E5226B49F4F0029B91B /* SocketView.swift */,
 				6D9A380826C5A5BE0033FA90 /* Supporting FIles */,
 				6D833E702718C75B001FEBDE /* InfoPlist.strings */,
-				B2270D2B2788952D00E4E304 /* Constants.swift */,
+				B2270D2B2788952D00E4E304 /* strConstants.swift */,
+				B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */,
 			);
 			path = "SMSF AppKinetics Client";
 			sourceTree = "<group>";
@@ -261,13 +264,14 @@
 				6DB97E4F26B49D4C0029B91B /* FileView.swift in Sources */,
 				6DB97E4D26B49A4F0029B91B /* FileController.swift in Sources */,
 				6D30985E26B9ACFD003DCFF2 /* DatabaseController.swift in Sources */,
+				B2A5BBE32788B85E009F8BDA /* AppKineticsController.swift in Sources */,
 				6D30986026B9D3D9003DCFF2 /* HttpController.swift in Sources */,
 				6D30986226B9E40D003DCFF2 /* SocketController.swift in Sources */,
 				6DB97E4026B47E810029B91B /* MainView.swift in Sources */,
 				6DB97E5126B49ED30029B91B /* HTTPView.swift in Sources */,
 				6DB97E3E26B47E810029B91B /* Dynamics_SwiftUI_SampleApp.swift in Sources */,
 				6DB97E5326B49F4F0029B91B /* SocketView.swift in Sources */,
-				B2270D2C2788952D00E4E304 /* Constants.swift in Sources */,
+				B2270D2C2788952D00E4E304 /* strConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
