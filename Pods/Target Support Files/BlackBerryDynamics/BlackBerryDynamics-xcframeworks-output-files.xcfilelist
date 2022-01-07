@@ -1,0 +1,3 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BlackBerryDynamics/BlackBerryDynamics/BlackBerryDynamics.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BlackBerryDynamics/BlackBerryDynamics/BlackBerryCerticom.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BlackBerryDynamics/BlackBerryDynamics/BlackBerryCerticomSBGSE.framework

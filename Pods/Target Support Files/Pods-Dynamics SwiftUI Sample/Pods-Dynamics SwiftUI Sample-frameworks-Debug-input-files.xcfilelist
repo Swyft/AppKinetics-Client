@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Dynamics SwiftUI Sample/Pods-Dynamics SwiftUI Sample-frameworks.sh
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BlackBerryDynamics/BlackBerryDynamics/BlackBerryDynamics.framework/BlackBerryDynamics
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BlackBerryDynamics/BlackBerryDynamics/BlackBerryCerticom.framework/BlackBerryCerticom
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BlackBerryDynamics/BlackBerryDynamics/BlackBerryCerticomSBGSE.framework/BlackBerryCerticomSBGSE

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/BlackBerryDynamics/BlackBerryDynamics-xcframeworks.sh
+${PODS_ROOT}/BlackBerryDynamics/Frameworks/BlackBerryDynamics.xcframework
+${PODS_ROOT}/BlackBerryDynamics/Frameworks/BlackBerryCerticom.xcframework
+${PODS_ROOT}/BlackBerryDynamics/Frameworks/BlackBerryCerticomSBGSE.xcframework
