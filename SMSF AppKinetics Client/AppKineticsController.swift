@@ -19,7 +19,7 @@ class AppKineticsController {
      let kSaveEditedFileService
      */
 
-    func importContact() -> Bool {
+    func importContact(vcard: String) -> Bool {
         let kImportContact = strConstants.kImportContact
         let kImportContactVersion = "1.0.0.0"
         var requestId: NSString? = nil

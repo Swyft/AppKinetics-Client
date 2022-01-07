@@ -30,6 +30,7 @@
 		B2A5BBF62788D412009F8BDA /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBF52788D412009F8BDA /* NoteView.swift */; };
 		B2A5BBF82788D899009F8BDA /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBF72788D899009F8BDA /* DocumentView.swift */; };
 		B2A5BBFA2788D8B1009F8BDA /* FileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBF92788D8B1009F8BDA /* FileEditView.swift */; };
+		B2A5BBFE2788EA74009F8BDA /* VCardContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBFD2788EA74009F8BDA /* VCardContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		B2A5BBF52788D412009F8BDA /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		B2A5BBF72788D899009F8BDA /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		B2A5BBF92788D8B1009F8BDA /* FileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEditView.swift; sourceTree = "<group>"; };
+		B2A5BBFD2788EA74009F8BDA /* VCardContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardContact.swift; sourceTree = "<group>"; };
 		ED337647726023A9F7E6F7CA /* Pods-Dynamics SwiftUI Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dynamics SwiftUI Sample.debug.xcconfig"; path = "Target Support Files/Pods-Dynamics SwiftUI Sample/Pods-Dynamics SwiftUI Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 		6DB97E3C26B47E810029B91B /* SMSF AppKinetics Client */ = {
 			isa = PBXGroup;
 			children = (
+				B2A5BBFC2788EA55009F8BDA /* Models */,
 				B2A5BBFB2788D8BE009F8BDA /* Views */,
 				6D72F99A26BB5154004CEDC6 /* AppDelegate.swift */,
 				6DB97E4126B47E820029B91B /* Assets.xcassets */,
@@ -153,6 +156,14 @@
 				B2A5BBF92788D8B1009F8BDA /* FileEditView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B2A5BBFC2788EA55009F8BDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2A5BBFD2788EA74009F8BDA /* VCardContact.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F0591B63C25CC269BF5AEADE /* Frameworks */ = {
@@ -286,6 +297,7 @@
 				6D30985E26B9ACFD003DCFF2 /* DatabaseController.swift in Sources */,
 				B2A5BBE32788B85E009F8BDA /* AppKineticsController.swift in Sources */,
 				6D30986026B9D3D9003DCFF2 /* HttpController.swift in Sources */,
+				B2A5BBFE2788EA74009F8BDA /* VCardContact.swift in Sources */,
 				B2A5BBF82788D899009F8BDA /* DocumentView.swift in Sources */,
 				6D30986226B9E40D003DCFF2 /* SocketController.swift in Sources */,
 				6DB97E4026B47E810029B91B /* MainView.swift in Sources */,
