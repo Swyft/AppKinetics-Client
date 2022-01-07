@@ -101,24 +101,20 @@ struct MainView: View {
                 VStack {
                     Text("SMSF Client").bold()
                     Spacer()
-                    NavigationLink("Link") {
+                    NavigationLink("Create Contact") {
                         SocketView(socketVC: SocketController())
                     }
-                    Button("Create Contact") {
-                        print("Create Contact fired")
-                        
+                    Spacer()
+                    NavigationLink("Create Document") {
+                        SocketView(socketVC: SocketController())
                     }
                     Spacer()
-                    Button("Create Document") {
-                        print("Create Document fired")
+                    NavigationLink("Create Note") {
+                        SocketView(socketVC: SocketController())
                     }
                     Spacer()
-                    Button("Create Note") {
-                        print("Create Note fired")
-                    }
-                    Spacer()
-                    Button("Edit File") {
-                        print("Edit File fired")
+                    NavigationLink("Edit File") {
+                        SocketView(socketVC: SocketController())
                     }
                 }
                 

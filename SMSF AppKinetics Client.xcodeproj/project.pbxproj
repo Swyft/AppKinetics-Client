@@ -36,7 +36,7 @@
 		6D72F99A26BB5154004CEDC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D833E702718C75B001FEBDE /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		6D9A380626C5A5B80033FA90 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		6DB97E3A26B47E810029B91B /* Dynamics SwiftUI Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dynamics SwiftUI Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB97E3A26B47E810029B91B /* SMSF AppKinetics Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMSF AppKinetics Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB97E3D26B47E810029B91B /* Dynamics_SwiftUI_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamics_SwiftUI_SampleApp.swift; sourceTree = "<group>"; };
 		6DB97E3F26B47E810029B91B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6DB97E4126B47E820029B91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		6DB97E3B26B47E810029B91B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DB97E3A26B47E810029B91B /* Dynamics SwiftUI Sample.app */,
+				6DB97E3A26B47E810029B91B /* SMSF AppKinetics Client.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DB97E3926B47E810029B91B /* Dynamics SwiftUI Sample */ = {
+		6DB97E3926B47E810029B91B /* SMSF AppKinetics Client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DB97E4926B47E820029B91B /* Build configuration list for PBXNativeTarget "Dynamics SwiftUI Sample" */;
+			buildConfigurationList = 6DB97E4926B47E820029B91B /* Build configuration list for PBXNativeTarget "SMSF AppKinetics Client" */;
 			buildPhases = (
 				E355E30A8C5D7245647CE9BA /* [CP] Check Pods Manifest.lock */,
 				6DB97E3626B47E810029B91B /* Sources */,
@@ -157,9 +157,9 @@
 			);
 			dependencies = (
 			);
-			name = "Dynamics SwiftUI Sample";
+			name = "SMSF AppKinetics Client";
 			productName = "Dynamics SwiftUI Sample";
-			productReference = 6DB97E3A26B47E810029B91B /* Dynamics SwiftUI Sample.app */;
+			productReference = 6DB97E3A26B47E810029B91B /* SMSF AppKinetics Client.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -189,7 +189,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DB97E3926B47E810029B91B /* Dynamics SwiftUI Sample */,
+				6DB97E3926B47E810029B91B /* SMSF AppKinetics Client */,
 			);
 		};
 /* End PBXProject section */
@@ -401,11 +401,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Dynamics SwiftUI Sample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Dynamics SwiftUI Sample/Info.plist";
+				INFOPLIST_FILE = "SMSF AppKinetics Client/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,11 +425,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Dynamics SwiftUI Sample/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Dynamics SwiftUI Sample/Info.plist";
+				INFOPLIST_FILE = "SMSF AppKinetics Client/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,7 +454,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DB97E4926B47E820029B91B /* Build configuration list for PBXNativeTarget "Dynamics SwiftUI Sample" */ = {
+		6DB97E4926B47E820029B91B /* Build configuration list for PBXNativeTarget "SMSF AppKinetics Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DB97E4A26B47E820029B91B /* Debug */,
