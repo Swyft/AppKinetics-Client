@@ -8,7 +8,6 @@
 import Foundation
 import BlackBerryDynamics.Runtime
 import BlackBerryDynamics.AppKinetics
-import GD.Runtime
 
 class AppKineticsController {
     
@@ -23,21 +22,24 @@ class AppKineticsController {
     func importContact() -> Bool {
         let kImportContact = strConstants.kImportContact
         let kImportContactVersion = "1.0.0.0"
- 
-        
         var requestId: NSString? = nil
-        //NSError * error=nil;
+        
+        var boolResult = false
         
         let results = GDiOS.sharedInstance().getServiceProviders(for: kImportContact,
                                                                   andVersion: kImportContactVersion,
                                                                   andServiceType: .application)
                 
-        var boolResult = false
-        
-        let serviceProvider = results.first
+        guard let serviceProvider = results.first else {
+            return false
+        }
 
+        guard let serviceProviderAddress = serviceProvider.address else {
+            return false
+        }
+        
         do {
-            try GDServiceClient.send(to: (serviceProvider?.address)!,
+            try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kImportContact,
                                                   withVersion: kImportContactVersion,
                                                   withMethod: strConstants.kImportMethod,
@@ -48,6 +50,42 @@ class AppKineticsController {
             
             boolResult = true
             
+        } catch (let error) {
+            print("\(error.localizedDescription)")
+        }
+        return boolResult
+    }
+    
+    func importDocument() -> Bool {
+        let kImportDocument = strConstants.kImportDocument
+        let kImportDocumentVersion = "1.0.0.0"
+        var requestId: NSString? = nil
+        
+        var boolResult = false
+        
+        let results = GDiOS.sharedInstance().getServiceProviders(for: kImportDocument,
+                                                                  andVersion: kImportDocumentVersion,
+                                                                  andServiceType: .application)
+        
+        guard let serviceProvider = results.first else {
+            return false
+        }
+
+        guard let serviceProviderAddress = serviceProvider.address else {
+            return false
+        }
+        
+        do {
+            try GDServiceClient.send(to: serviceProviderAddress,
+                                                  withService: kImportDocument,
+                                                  withVersion: kImportDocumentVersion,
+                                                  withMethod: strConstants.kImportMethod,
+                                                  withParams: nil,
+                                                  withAttachments: nil,
+                                                  bringServiceToFront: .GDEPreferPeerInForeground,
+                                                  requestID: &requestId)
+            
+            boolResult = true
             
         } catch (let error) {
             print("\(error.localizedDescription)")
@@ -55,16 +93,78 @@ class AppKineticsController {
         return boolResult
     }
     
-    func importDocument() {
+    func importNote() -> Bool {
+        let kImportNote = strConstants.kImportNote
+        let kImportNoteVersion = "1.0.0.0"
+        var requestId: NSString? = nil
         
+        var boolResult = false
+        
+        let results = GDiOS.sharedInstance().getServiceProviders(for: kImportNote,
+                                                                  andVersion: kImportNoteVersion,
+                                                                  andServiceType: .application)
+        
+        guard let serviceProvider = results.first else {
+            return false
+        }
+
+        guard let serviceProviderAddress = serviceProvider.address else {
+            return false
+        }
+        
+        do {
+            try GDServiceClient.send(to: serviceProviderAddress,
+                                                  withService: kImportNote,
+                                                  withVersion: kImportNoteVersion,
+                                                  withMethod: strConstants.kImportMethod,
+                                                  withParams: nil,
+                                                  withAttachments: nil,
+                                                  bringServiceToFront: .GDEPreferPeerInForeground,
+                                                  requestID: &requestId)
+            
+            boolResult = true
+            
+        } catch (let error) {
+            print("\(error.localizedDescription)")
+        }
+        return boolResult
     }
     
-    func importNote() {
+    func saveEditedFileService() -> Bool {
+        let kSaveEditedFileService = strConstants.kSaveEditedFileService
+        let kSaveEditedFileServiceVersion = "1.0.0.0"
+        var requestId: NSString? = nil
         
-    }
-    
-    func saveEditedFileService() {
+        var boolResult = false
         
+        let results = GDiOS.sharedInstance().getServiceProviders(for: kSaveEditedFileService,
+                                                                  andVersion: kSaveEditedFileServiceVersion,
+                                                                  andServiceType: .application)
+        
+        guard let serviceProvider = results.first else {
+            return false
+        }
+
+        guard let serviceProviderAddress = serviceProvider.address else {
+            return false
+        }
+        
+        do {
+            try GDServiceClient.send(to: serviceProviderAddress,
+                                                  withService: kSaveEditedFileService,
+                                                  withVersion: kSaveEditedFileServiceVersion,
+                                                  withMethod: strConstants.kImportMethod,
+                                                  withParams: nil,
+                                                  withAttachments: nil,
+                                                  bringServiceToFront: .GDEPreferPeerInForeground,
+                                                  requestID: &requestId)
+            
+            boolResult = true
+            
+        } catch (let error) {
+            print("\(error.localizedDescription)")
+        }
+        return boolResult
     }
     
 }

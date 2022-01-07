@@ -99,45 +99,25 @@ struct MainView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    Text("SMSF Client").bold()
-                    Spacer()
                     NavigationLink("Create Contact") {
-                        SocketView(socketVC: SocketController())
+                        ContactView()
                     }
                     Spacer()
                     NavigationLink("Create Document") {
-                        SocketView(socketVC: SocketController())
+                        DocumentView()
                     }
                     Spacer()
                     NavigationLink("Create Note") {
-                        SocketView(socketVC: SocketController())
+                        NoteView()
                     }
                     Spacer()
                     NavigationLink("Edit File") {
-                        SocketView(socketVC: SocketController())
+                        FileEditView()
                     }
                 }
                 
-            }
+            }.navigationTitle("AppKinetics Client")
         }
-//        TabView {
-//            DatabaseView(dbVC: DBController())
-//                .tabItem {
-//                    Text("Database")
-//            }
-//            FileView(fileVC: FileController())
-//                .tabItem {
-//                Text("File")
-//            }
-//            HTTPView(httpVC: HttpController())
-//                .tabItem {
-//                    Text("HTTP")
-//            }
-//            SocketView(socketVC: SocketController())
-//                .tabItem {
-//                    Text("Socket")
-//            }
-//        }
         .font(.headline)
     }
 }
