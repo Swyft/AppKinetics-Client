@@ -9,7 +9,19 @@ import SwiftUI
 
 struct DocumentView: View {
     var body: some View {
-        Text("Document View")
+        // PSI-Training-Signup-Instructions.docx
+        Form {
+            Section(header: Text("Document")) {
+                Text("PSI-Training-Signup-Instructions.docx")
+                
+            }
+            Section {
+                Button("Send to SMSF") {
+                    print("send Doc to SMSF")
+                    let _ = AppKineticsController().importDocument()
+                }
+            }
+        }.navigationTitle("Create Document")
     }
 }
 

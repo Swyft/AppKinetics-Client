@@ -18,6 +18,10 @@ class AppKineticsController {
      let kImportNote             = "com.swyftmobile.smsf.create-note"
      let kSaveEditedFileService
      */
+    
+    let path = Bundle.main.resourcePath!
+    let samplefilename = "PSI-Training-Signup-Instructions.docx"
+    let fileManager = FileManager.default
 
     func importContact(vcard: String) -> Bool {
         let kImportContact = strConstants.kImportContact
@@ -83,13 +87,15 @@ class AppKineticsController {
             return false
         }
         
+        let wordfile = moveFileToDynamics(filename: self.samplefilename)
+        
         do {
             try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kImportDocument,
                                                   withVersion: kImportDocumentVersion,
                                                   withMethod: strConstants.kImportMethod,
                                                   withParams: nil,
-                                                  withAttachments: nil,
+                                                  withAttachments: [wordfile],
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
                                                   requestID: &requestId)
             
@@ -161,7 +167,7 @@ class AppKineticsController {
             try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kSaveEditedFileService,
                                                   withVersion: kSaveEditedFileServiceVersion,
-                                                  withMethod: strConstants.kImportMethod,
+                                                  withMethod: strConstants.kSaveEditMethod,
                                                   withParams: nil,
                                                   withAttachments: nil,
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
@@ -188,5 +194,14 @@ class AppKineticsController {
         var documentPath = URL(fileURLWithPath: documentPaths[0], isDirectory: true)
         documentPath.deleteLastPathComponent()
         return documentPath
+    }
+    
+    // This method takes a file, moves it to dynamics so it can be sent to
+    private func moveFileToDynamics(filename: String) -> String {
+        let data = fileManager.contents(atPath: "\(path)/\(filename)")
+        let directory = getDocumentsDirectory()
+        let dynamicsfilepath = "\(directory)/\(filename)"
+        GDFileManager.default().createFile(atPath: dynamicsfilepath, contents: data, attributes: nil)
+        return dynamicsfilepath
     }
 }
