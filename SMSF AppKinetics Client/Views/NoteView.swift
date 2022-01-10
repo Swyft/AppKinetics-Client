@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct NoteView: View {
+    @State var title = ""
+    @State var note = ""
+    
     var body: some View {
-        Text("Note View")
+        Form {
+            Section(header: Text("Note ")) {
+                TextField("Title", text: $title)
+                TextEditor(text: $note)
+            }
+            Section {
+                Button("Send to SMSF") {
+                    print("send to SMSF")
+                    //let _ = AppKineticsController().importContact(vcard: vcardstr)
+                }
+            }
+        }.navigationTitle("Create Note")
     }
 }
 

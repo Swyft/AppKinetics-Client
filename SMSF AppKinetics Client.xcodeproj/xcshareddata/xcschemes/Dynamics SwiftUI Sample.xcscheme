@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DB97E3926B47E810029B91B"
-               BuildableName = "Dynamics SwiftUI Sample.app"
+               BuildableName = "SMSF AppKinetics Client.app"
                BlueprintName = "SMSF AppKinetics Client"
                ReferencedContainer = "container:SMSF AppKinetics Client.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DB97E3926B47E810029B91B"
-            BuildableName = "Dynamics SwiftUI Sample.app"
+            BuildableName = "SMSF AppKinetics Client.app"
             BlueprintName = "SMSF AppKinetics Client"
             ReferencedContainer = "container:SMSF AppKinetics Client.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DB97E3926B47E810029B91B"
-            BuildableName = "Dynamics SwiftUI Sample.app"
+            BuildableName = "SMSF AppKinetics Client.app"
             BlueprintName = "SMSF AppKinetics Client"
             ReferencedContainer = "container:SMSF AppKinetics Client.xcodeproj">
          </BuildableReference>

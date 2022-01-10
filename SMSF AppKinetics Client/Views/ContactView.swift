@@ -24,6 +24,9 @@ struct ContactView: View {
             Section {
                 Button("Send to SMSF") {
                     print("send to SMSF")
+                    let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: phone)
+                    let vcardstr = vcard.createVCardString()
+                    let _ = AppKineticsController().importContact(vcard: vcardstr)
                 }
             }
             

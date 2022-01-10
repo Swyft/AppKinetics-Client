@@ -38,13 +38,21 @@ class AppKineticsController {
             return false
         }
         
+        var paths = getDocumentsDirectory()
+        //create filename
+        let filename = ProcessInfo().globallyUniqueString.appending(".vcf")
+        paths.appendPathComponent(filename)
+        let filepathStr = paths.absoluteString
+        
+        GDFileManager.default().createFile(atPath: filepathStr, contents: vcard.data(using: .utf8), attributes: nil)
+        
         do {
             try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kImportContact,
                                                   withVersion: kImportContactVersion,
                                                   withMethod: strConstants.kImportMethod,
                                                   withParams: nil,
-                                                  withAttachments: nil,
+                                                  withAttachments: [filepathStr],
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
                                                   requestID: &requestId)
             
@@ -167,4 +175,18 @@ class AppKineticsController {
         return boolResult
     }
     
+    private func getDocumentsDirectory() -> URL {
+        let searchPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        if searchPaths.count > 0 {
+            print("\(searchPaths[0])")
+        }
+        var documentPaths: [String] = Array<String>()
+        for url in searchPaths {
+            documentPaths.append(url)
+        }
+        
+        var documentPath = URL(fileURLWithPath: documentPaths[0], isDirectory: true)
+        documentPath.deleteLastPathComponent()
+        return documentPath
+    }
 }
