@@ -12,6 +12,7 @@ struct VCardContact {
     var lastName = ""
     var email = ""
     var phone = ""
+    var cell = ""
     
     func createVCardString() -> String {
         
@@ -20,7 +21,8 @@ BEGIN:VCARD
 VERSION:2.1
 FN:\(firstName) \(lastName)
 "N:\(lastName);\(firstName)
-TEL;CELL:+91 \(phone)
+TEL;WORK;VOICE;PREF:+91 \(phone)
+TEL;CELL:+91 \(cell)
 EMAIL;WORK;INTERNET:\(email)
 URL:www.swyftmobile.com
 ORG:xxx Private limited

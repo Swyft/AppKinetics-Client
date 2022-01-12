@@ -18,7 +18,7 @@ struct DocumentView: View {
             Section {
                 Button("Send to SMSF") {
                     print("send Doc to SMSF")
-                    let _ = AppKineticsController().importDocument()
+                    let _ = AppKineticsController().importDocument(filename: "PSI-Training-Signup-Instructions.docx", mimetype: "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
                 }
             }
         }.navigationTitle("Create Document")

@@ -68,7 +68,7 @@ class AppKineticsController {
         return boolResult
     }
     
-    func importDocument() -> Bool {
+    func importDocument(filename: String, mimetype: String) -> Bool {
         let kImportDocument = strConstants.kImportDocument
         let kImportDocumentVersion = "1.0.0.0"
         var requestId: NSString? = nil
@@ -88,13 +88,14 @@ class AppKineticsController {
         }
         
         let wordfile = moveFileToDynamics(filename: self.samplefilename)
+        let params = ["Filename": filename, "Mimetype": mimetype]
         
         do {
             try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kImportDocument,
                                                   withVersion: kImportDocumentVersion,
                                                   withMethod: strConstants.kImportMethod,
-                                                  withParams: nil,
+                                                  withParams: params,
                                                   withAttachments: [wordfile],
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
                                                   requestID: &requestId)
@@ -107,7 +108,7 @@ class AppKineticsController {
         return boolResult
     }
     
-    func importNote() -> Bool {
+    func importNote(title: String, body: String) -> Bool {
         let kImportNote = strConstants.kImportNote
         let kImportNoteVersion = "1.0.0.0"
         var requestId: NSString? = nil
@@ -125,13 +126,14 @@ class AppKineticsController {
         guard let serviceProviderAddress = serviceProvider.address else {
             return false
         }
+        let params = ["Title": title, "Body": body]
         
         do {
             try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kImportNote,
                                                   withVersion: kImportNoteVersion,
                                                   withMethod: strConstants.kImportMethod,
-                                                  withParams: nil,
+                                                  withParams: params,
                                                   withAttachments: nil,
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
                                                   requestID: &requestId)
@@ -144,7 +146,7 @@ class AppKineticsController {
         return boolResult
     }
     
-    func saveEditedFileService() -> Bool {
+    func saveEditedFileService(from doc: String) -> Bool {
         let kSaveEditedFileService = strConstants.kSaveEditedFileService
         let kSaveEditedFileServiceVersion = "1.0.0.0"
         var requestId: NSString? = nil
@@ -162,6 +164,14 @@ class AppKineticsController {
         guard let serviceProviderAddress = serviceProvider.address else {
             return false
         }
+        
+        var paths = getDocumentsDirectory()
+        //create filename
+        let filename = ProcessInfo().globallyUniqueString.appending(".txt")
+        paths.appendPathComponent(filename)
+        let filepathStr = paths.absoluteString
+        
+        GDFileManager.default().createFile(atPath: filepathStr, contents: doc.data(using: .utf8), attributes: nil)
         
         do {
             try GDServiceClient.send(to: serviceProviderAddress,

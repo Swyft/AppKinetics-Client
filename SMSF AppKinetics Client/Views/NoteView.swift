@@ -20,6 +20,7 @@ struct NoteView: View {
             Section {
                 Button("Send to SMSF") {
                     print("send to SMSF")
+                    let _ = AppKineticsController().importNote(title: title, body: note)
                     //let _ = AppKineticsController().importContact(vcard: vcardstr)
                 }
             }

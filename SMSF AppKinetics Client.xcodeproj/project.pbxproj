@@ -63,6 +63,7 @@
 		B2A5BBF92788D8B1009F8BDA /* FileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEditView.swift; sourceTree = "<group>"; };
 		B2A5BBFD2788EA74009F8BDA /* VCardContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardContact.swift; sourceTree = "<group>"; };
 		B2C341C4278CB40C005832C0 /* PSI-Training-Signup-Instructions.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PSI-Training-Signup-Instructions.docx"; sourceTree = "<group>"; };
+		B2C341D7278F1907005832C0 /* SMSF AppKinetics Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SMSF AppKinetics Client.entitlements"; sourceTree = "<group>"; };
 		ED337647726023A9F7E6F7CA /* Pods-Dynamics SwiftUI Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dynamics SwiftUI Sample.debug.xcconfig"; path = "Target Support Files/Pods-Dynamics SwiftUI Sample/Pods-Dynamics SwiftUI Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +118,7 @@
 		6DB97E3C26B47E810029B91B /* SMSF AppKinetics Client */ = {
 			isa = PBXGroup;
 			children = (
+				B2C341D7278F1907005832C0 /* SMSF AppKinetics Client.entitlements */,
 				B2A5BBFC2788EA55009F8BDA /* Models */,
 				B2A5BBFB2788D8BE009F8BDA /* Views */,
 				6D72F99A26BB5154004CEDC6 /* AppDelegate.swift */,
@@ -444,7 +446,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SMSF AppKinetics Client/SMSF AppKinetics Client.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
@@ -455,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.waasample.goodapisample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyftmobile.swiftuidemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,7 +472,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SMSF AppKinetics Client/SMSF AppKinetics Client.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
@@ -479,7 +485,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.waasample.goodapisample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swyftmobile.swiftuidemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

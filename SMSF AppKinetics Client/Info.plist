@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>SMSF AP Client</string>
+	<string>SMSF AK Client</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,26 +24,32 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.waasample.goodapisample</string>
+			<string>com.swyftmobile.swiftuidemo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.waasample.goodapisample.sc2</string>
-				<string>com.waasample.goodapisample.sc3</string>
-				<string>com.waasample.goodapisample.sc2.1.0.0.0</string>
+				<string>com.swyftmobile.swiftuidemo.sc2</string>
+				<string>com.swyftmobile.swiftuidemo.sc3</string>
+				<string>com.swyftmobile.swiftuidemo.sc2.1.0.0.0</string>
 				<string>com.good.gd.discovery</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GDApplicationID</key>
 	<string>com.swyftmobile.swiftuidemo</string>
 	<key>GDApplicationVersion</key>
 	<string>1.0.0.0</string>
 	<key>GDConsoleLogger</key>
 	<string>GDFilterNone</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The Camera is used for scanning your BlackBerry UEM barcode</string>
+	<key>NSContactsUsageDescription</key>
+	<string>The Contact API is used solely for formatting VCard data, your contacts will not be accessed</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>FaceID can be used to authenticate users without using a password.</string>
 	<key>UIApplicationSceneManifest</key>
