@@ -52,6 +52,8 @@
 	<string>The Contact API is used solely for formatting VCard data, your contacts will not be accessed</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>FaceID can be used to authenticate users without using a password.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The BlackBerry Dynamics framework uses location to determine if the user is in correct geozone for use.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
