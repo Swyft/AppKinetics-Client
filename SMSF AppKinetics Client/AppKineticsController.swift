@@ -114,7 +114,7 @@ class AppKineticsController {
         var requestId: NSString? = nil
         
         var boolResult = false
-        
+        // com.swyftmobile.smsf.create-note
         let results = GDiOS.sharedInstance().getServiceProviders(for: kImportNote,
                                                                   andVersion: kImportNoteVersion,
                                                                   andServiceType: .application)
@@ -128,13 +128,21 @@ class AppKineticsController {
         }
         let params = ["Title": title, "Body": body]
         
+        var paths = getDocumentsDirectory()
+        //create filename
+        let filename = ProcessInfo().globallyUniqueString.appending(".txt")
+        paths.appendPathComponent(filename)
+        let filepathStr = paths.absoluteString
+        
+        GDFileManager.default().createFile(atPath: filepathStr, contents: body.data(using: .utf8), attributes: nil)
+        
         do {
             try GDServiceClient.send(to: serviceProviderAddress,
                                                   withService: kImportNote,
                                                   withVersion: kImportNoteVersion,
                                                   withMethod: strConstants.kImportMethod,
                                                   withParams: params,
-                                                  withAttachments: nil,
+                                                  withAttachments: [filepathStr],
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
                                                   requestID: &requestId)
             
@@ -167,7 +175,7 @@ class AppKineticsController {
         
         var paths = getDocumentsDirectory()
         //create filename
-        let filename = ProcessInfo().globallyUniqueString.appending(".txt")
+        let filename = ProcessInfo().globallyUniqueString.appending(".vcf")
         paths.appendPathComponent(filename)
         let filepathStr = paths.absoluteString
         
@@ -179,7 +187,7 @@ class AppKineticsController {
                                                   withVersion: kSaveEditedFileServiceVersion,
                                                   withMethod: strConstants.kSaveEditMethod,
                                                   withParams: nil,
-                                                  withAttachments: nil,
+                                                  withAttachments: [filepathStr],
                                                   bringServiceToFront: .GDEPreferPeerInForeground,
                                                   requestID: &requestId)
             

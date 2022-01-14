@@ -94,6 +94,7 @@ struct MainView: View {
      let kImportNote             = "com.swyftmobile.smsf.create-note"
      let kSaveEditedFileService
      */
+    //@State private var selectedView: Int? = 0
     
     var body: some View {
         NavigationView {

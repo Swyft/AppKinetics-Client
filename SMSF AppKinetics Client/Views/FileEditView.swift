@@ -9,7 +9,16 @@ import SwiftUI
 
 struct FileEditView: View {
     @State var document = """
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+BEGIN:VCARD
+VERSION:2.1
+FN:Mike Fitzpatrick
+"N:Fitzpatrick;Mike
+TEL;WORK;VOICE;PREF:+91 9045720482
+TEL;CELL:+91 2067309623
+EMAIL;WORK;INTERNET:mike.fitzpatrick@swyftmobile.com
+URL:www.swyftmobile.com
+ORG:xxx Private limited
+END:VCARD
 """
     
     var body: some View {

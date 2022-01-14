@@ -32,6 +32,8 @@
 		B2A5BBFA2788D8B1009F8BDA /* FileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBF92788D8B1009F8BDA /* FileEditView.swift */; };
 		B2A5BBFE2788EA74009F8BDA /* VCardContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBFD2788EA74009F8BDA /* VCardContact.swift */; };
 		B2C341C5278CB40C005832C0 /* PSI-Training-Signup-Instructions.docx in Resources */ = {isa = PBXBuildFile; fileRef = B2C341C4278CB40C005832C0 /* PSI-Training-Signup-Instructions.docx */; };
+		B2C341D92791CB8B005832C0 /* Airplane Usage Log.doc in Resources */ = {isa = PBXBuildFile; fileRef = B2C341D82791CB8B005832C0 /* Airplane Usage Log.doc */; };
+		B2C341DB2791CBD1005832C0 /* radio alt and 5g.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B2C341DA2791CBD1005832C0 /* radio alt and 5g.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		B2A5BBFD2788EA74009F8BDA /* VCardContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardContact.swift; sourceTree = "<group>"; };
 		B2C341C4278CB40C005832C0 /* PSI-Training-Signup-Instructions.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PSI-Training-Signup-Instructions.docx"; sourceTree = "<group>"; };
 		B2C341D7278F1907005832C0 /* SMSF AppKinetics Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SMSF AppKinetics Client.entitlements"; sourceTree = "<group>"; };
+		B2C341D82791CB8B005832C0 /* Airplane Usage Log.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Airplane Usage Log.doc"; sourceTree = "<group>"; };
+		B2C341DA2791CBD1005832C0 /* radio alt and 5g.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "radio alt and 5g.pdf"; sourceTree = "<group>"; };
 		ED337647726023A9F7E6F7CA /* Pods-Dynamics SwiftUI Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dynamics SwiftUI Sample.debug.xcconfig"; path = "Target Support Files/Pods-Dynamics SwiftUI Sample/Pods-Dynamics SwiftUI Sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,8 @@
 				6D9A380826C5A5BE0033FA90 /* Supporting FIles */,
 				6D833E702718C75B001FEBDE /* InfoPlist.strings */,
 				B2270D2B2788952D00E4E304 /* strConstants.swift */,
+				B2C341D82791CB8B005832C0 /* Airplane Usage Log.doc */,
+				B2C341DA2791CBD1005832C0 /* radio alt and 5g.pdf */,
 				B2C341C4278CB40C005832C0 /* PSI-Training-Signup-Instructions.docx */,
 				B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */,
 			);
@@ -240,6 +246,8 @@
 			files = (
 				6D4B51F326BDDC23008043A3 /* Entitlements.plist in Resources */,
 				6DB97E4526B47E820029B91B /* Preview Assets.xcassets in Resources */,
+				B2C341D92791CB8B005832C0 /* Airplane Usage Log.doc in Resources */,
+				B2C341DB2791CBD1005832C0 /* radio alt and 5g.pdf in Resources */,
 				6D9A380726C5A5B80033FA90 /* README.md in Resources */,
 				6DB97E4226B47E820029B91B /* Assets.xcassets in Resources */,
 				6D833E712718C75B001FEBDE /* InfoPlist.strings in Resources */,
@@ -448,7 +456,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SMSF AppKinetics Client/SMSF AppKinetics Client.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
@@ -474,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SMSF AppKinetics Client/SMSF AppKinetics Client.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
