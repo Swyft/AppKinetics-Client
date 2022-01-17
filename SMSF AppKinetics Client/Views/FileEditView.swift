@@ -12,12 +12,12 @@ struct FileEditView: View {
 BEGIN:VCARD
 VERSION:2.1
 FN:Mike Fitzpatrick
-"N:Fitzpatrick;Mike
+N:Fitzpatrick;Mike
 TEL;WORK;VOICE;PREF:+91 9045720482
 TEL;CELL:+91 2067309623
 EMAIL;WORK;INTERNET:mike.fitzpatrick@swyftmobile.com
 URL:www.swyftmobile.com
-ORG:xxx Private limited
+ORG:Swyft Technology L.L.C.
 END:VCARD
 """
     

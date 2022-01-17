@@ -95,6 +95,8 @@ struct MainView: View {
      let kSaveEditedFileService
      */
     //@State private var selectedView: Int? = 0
+    let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+    let appBuildVersion: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
     
     var body: some View {
         NavigationView {
@@ -115,6 +117,8 @@ struct MainView: View {
                     NavigationLink("Edit File") {
                         FileEditView()
                     }
+                    Spacer(minLength: 22.0)
+                    Text("Build: \(appVersionString).\(appBuildVersion)").font(.callout)
                 }
                 
             }.navigationTitle("AppKinetics Client")
