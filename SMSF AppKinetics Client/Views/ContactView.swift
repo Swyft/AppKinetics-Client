@@ -13,6 +13,7 @@ struct ContactView: View {
     @State var email = ""
     @State var officephone = ""
     @State var cellphone = ""
+    @State var url = ""
     @State var showingAlert = false
     @State var validationMessage = ""
     
@@ -22,8 +23,16 @@ struct ContactView: View {
                 TextField("First Name", text: $firstName)
                 TextField("Last Name", text: $lastName)
                 TextField("Email", text: $email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
                 TextField("Office Phone", text: $officephone)
+                    .keyboardType(.phonePad)
                 TextField("Cell Phone", text: $cellphone)
+                    .keyboardType(.phonePad)
+                TextField("Website URL", text: $url)
+                    .keyboardType(.URL)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
             }
             Section {
                 if #available(iOS 15.0, *) {

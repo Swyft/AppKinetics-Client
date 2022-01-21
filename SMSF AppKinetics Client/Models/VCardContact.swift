@@ -13,6 +13,7 @@ struct VCardContact {
     var email = ""
     var phone = ""
     var cell = ""
+    var url = ""
     
     func createVCardString() -> String {
         
@@ -21,10 +22,10 @@ BEGIN:VCARD
 VERSION:2.1
 FN:\(firstName) \(lastName)
 N:\(lastName);\(firstName);;;
-TEL;WORK;VOICE;PREF:+91 \(phone)
-TEL;CELL:+91 \(cell)
+TEL;WORK;VOICE;PREF:\(phone)
+TEL;CELL:\(cell)
 EMAIL;WORK;INTERNET:\(email)
-URL:www.swyftmobile.com
+URL:\(url)
 ORG:Swyft Technology L.L.C.
 END:VCARD
 """
