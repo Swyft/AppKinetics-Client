@@ -41,7 +41,7 @@ struct ContactView: View {
                         let (message, isValid) = validateForm()
                         validationMessage = message
                         if isValid {
-                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone)
+                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone, url: url)
                             let vcardstr = vcard.createVCardString()
                             let _ = AppKineticsController().importContact(vcard: vcardstr)
                         } else {
@@ -58,7 +58,7 @@ struct ContactView: View {
                         let (message, isValid) = validateForm()
                         validationMessage = message
                         if isValid {
-                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone)
+                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone, url: url)
                             let vcardstr = vcard.createVCardString()
                             let _ = AppKineticsController().importContact(vcard: vcardstr)
                         } else {
