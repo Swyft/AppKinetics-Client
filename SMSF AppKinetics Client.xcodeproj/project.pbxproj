@@ -24,6 +24,7 @@
 		6DB97E5126B49ED30029B91B /* HTTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB97E5026B49ED30029B91B /* HTTPView.swift */; };
 		6DB97E5326B49F4F0029B91B /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB97E5226B49F4F0029B91B /* SocketView.swift */; };
 		6DB97E5526B49F590029B91B /* DatabaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB97E5426B49F590029B91B /* DatabaseView.swift */; };
+		B22430A7279F324D00EE17B2 /* LeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22430A6279F324C00EE17B2 /* LeadView.swift */; };
 		B2270D2C2788952D00E4E304 /* strConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2270D2B2788952D00E4E304 /* strConstants.swift */; };
 		B2A5BBE32788B85E009F8BDA /* AppKineticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */; };
 		B2A5BBF42788D3EC009F8BDA /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5BBF32788D3EC009F8BDA /* ContactView.swift */; };
@@ -57,6 +58,7 @@
 		6DB97E5226B49F4F0029B91B /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
 		6DB97E5426B49F590029B91B /* DatabaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseView.swift; sourceTree = "<group>"; };
 		7384A4F986C59C564B045741 /* Pods_Dynamics_SwiftUI_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dynamics_SwiftUI_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22430A6279F324C00EE17B2 /* LeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadView.swift; sourceTree = "<group>"; };
 		B2270D2B2788952D00E4E304 /* strConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strConstants.swift; sourceTree = "<group>"; };
 		B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKineticsController.swift; sourceTree = "<group>"; };
 		B2A5BBF32788D3EC009F8BDA /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				B2A5BBF52788D412009F8BDA /* NoteView.swift */,
 				B2A5BBF72788D899009F8BDA /* DocumentView.swift */,
 				B2A5BBF92788D8B1009F8BDA /* FileEditView.swift */,
+				B22430A6279F324C00EE17B2 /* LeadView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				6DB97E5526B49F590029B91B /* DatabaseView.swift in Sources */,
 				6DB97E4F26B49D4C0029B91B /* FileView.swift in Sources */,
 				6DB97E4D26B49A4F0029B91B /* FileController.swift in Sources */,
+				B22430A7279F324D00EE17B2 /* LeadView.swift in Sources */,
 				6D30985E26B9ACFD003DCFF2 /* DatabaseController.swift in Sources */,
 				B2A5BBE32788B85E009F8BDA /* AppKineticsController.swift in Sources */,
 				6D30986026B9D3D9003DCFF2 /* HttpController.swift in Sources */,
@@ -456,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SMSF AppKinetics Client/SMSF AppKinetics Client.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;
@@ -482,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SMSF AppKinetics Client/SMSF AppKinetics Client.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"SMSF AppKinetics Client/Preview Content\"";
 				DEVELOPMENT_TEAM = GB3WBXD8F8;
 				ENABLE_BITCODE = NO;

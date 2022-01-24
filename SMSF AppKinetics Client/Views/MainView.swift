@@ -88,13 +88,6 @@ struct PaddedCustomTextfield : View {
 
 struct MainView: View {
     
-    /*
-     let kImportContact          = "com.swyftmobile.smsf.create-contact"
-     let kImportDocument         = "com.swyftmobile.smsf.create-document"
-     let kImportNote             = "com.swyftmobile.smsf.create-note"
-     let kSaveEditedFileService
-     */
-    //@State private var selectedView: Int? = 0
     let appVersionString: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     let appBuildVersion: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
     
@@ -104,6 +97,10 @@ struct MainView: View {
                 VStack {
                     NavigationLink("Create Contact") {
                         ContactView()
+                    }
+                    Spacer()
+                    NavigationLink("Create Lead") {
+                        LeadView()
                     }
                     Spacer()
                     NavigationLink("Create Document") {
@@ -117,16 +114,14 @@ struct MainView: View {
                     NavigationLink("Edit File") {
                         FileEditView()
                     }
-                    Spacer(minLength: 22.0)
+                    .padding(.bottom, 22.0)
                     Text("Build: \(appVersionString).\(appBuildVersion)").font(.callout)
                 }
-                
             }.navigationTitle("AppKinetics Client")
         }
         .font(.headline)
     }
 }
-
 
 // Cannot use preview because GD will not be provisioned in the preview environment which prevents the database from being initilized
 //
