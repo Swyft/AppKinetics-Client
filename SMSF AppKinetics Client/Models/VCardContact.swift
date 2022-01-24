@@ -10,6 +10,7 @@ import Foundation
 struct VCardContact {
     var firstName = ""
     var lastName = ""
+    var organization = ""
     var email = ""
     var phone = ""
     var cell = ""
@@ -26,7 +27,7 @@ TEL;WORK;VOICE;PREF:\(phone)
 TEL;CELL:\(cell)
 EMAIL;WORK;INTERNET:\(email)
 URL:\(url)
-ORG:Swyft Technology L.L.C.
+ORG:\(organization)
 END:VCARD
 """
         

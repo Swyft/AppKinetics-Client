@@ -10,6 +10,7 @@ import SwiftUI
 struct ContactView: View {
     @State var firstName = ""
     @State var lastName = ""
+    @State var company = ""
     @State var email = ""
     @State var officephone = ""
     @State var cellphone = ""
@@ -22,6 +23,7 @@ struct ContactView: View {
             Section(header: Text("Contact ")) {
                 TextField("First Name", text: $firstName)
                 TextField("Last Name", text: $lastName)
+                TextField("Company Name", text: $company)
                 TextField("Email", text: $email)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
@@ -41,7 +43,7 @@ struct ContactView: View {
                         let (message, isValid) = validateForm()
                         validationMessage = message
                         if isValid {
-                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone, url: url)
+                            let vcard = VCardContact(firstName: firstName, lastName: lastName, organization: company, email: email, phone: officephone, cell: cellphone, url: url)
                             let vcardstr = vcard.createVCardString()
                             let _ = AppKineticsController().importContact(vcard: vcardstr)
                         } else {
@@ -58,7 +60,7 @@ struct ContactView: View {
                         let (message, isValid) = validateForm()
                         validationMessage = message
                         if isValid {
-                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone, url: url)
+                            let vcard = VCardContact(firstName: firstName, lastName: lastName, organization: company, email: email, phone: officephone, cell: cellphone, url: url)
                             let vcardstr = vcard.createVCardString()
                             let _ = AppKineticsController().importContact(vcard: vcardstr)
                         } else {
