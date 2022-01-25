@@ -13,7 +13,7 @@ struct DocumentView: View {
                      "PSI-Training-Signup-Instructions.docx",
                      "radio alt and 5g.pdf"]
     
-    var fileDictionaryArray: [String: String] = ["Airplane Usage Log.doc": "application/msword",
+    var fileDictionaryArray: [String: String] = ["Airplane Usage Log.doc": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                                "PSI-Training-Signup-Instructions.docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                                "radio alt and 5g.pdf": "application/pdf"]
     
@@ -25,9 +25,12 @@ struct DocumentView: View {
                 Text("Select your document to import")
                 
                 Picker("Document", selection: $selectedIndex) {
-                    Text("Airplane Usage Log.doc").tag(0)
-                    Text("PSI-Training-Signup-Instructions.docx").tag(1)
-                    Text("radio alt and 5g.pdf").tag(2)
+                    ForEach(Array(fileArray.enumerated()), id: \.1) { (index, item) in
+                        Text("\(item)").tag(index)
+                    }
+//                    Text("Airplane Usage Log.doc").tag(0)
+//                    Text("PSI-Training-Signup-Instructions.docx").tag(1)
+//                    Text("radio alt and 5g.pdf").tag(2)
                 }
                 
             }

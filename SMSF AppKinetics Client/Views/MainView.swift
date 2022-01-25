@@ -103,7 +103,7 @@ struct MainView: View {
                         LeadView()
                     }
                     Spacer()
-                    NavigationLink("Create Document") {
+                    NavigationLink("Create Document to Upload Document") {
                         DocumentView()
                     }
                     Spacer()

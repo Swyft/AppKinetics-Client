@@ -87,7 +87,7 @@ class AppKineticsController {
             return false
         }
         
-        let wordfile = moveFileToDynamics(filename: self.samplefilename)
+        let wordfile = moveFileToDynamics(filename: filename)
         let params = ["Filename": filename, "Mimetype": mimetype]
         
         do {
@@ -216,9 +216,10 @@ class AppKineticsController {
     
     // This method takes a file, moves it to dynamics so it can be sent to
     private func moveFileToDynamics(filename: String) -> String {
+        print("local file path: \(path)/\(filename)")
         let data = fileManager.contents(atPath: "\(path)/\(filename)")
         let directory = getDocumentsDirectory()
-        let dynamicsfilepath = "\(directory)/\(filename)"
+        let dynamicsfilepath = "\(directory)\(filename)"
         GDFileManager.default().createFile(atPath: dynamicsfilepath, contents: data, attributes: nil)
         return dynamicsfilepath
     }
