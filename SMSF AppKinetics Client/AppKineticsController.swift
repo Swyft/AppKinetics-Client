@@ -126,7 +126,10 @@ class AppKineticsController {
         guard let serviceProviderAddress = serviceProvider.address else {
             return false
         }
-        let params = ["Title": title, "Body": body]
+        
+        let base64body = Data(body.utf8).base64EncodedString()
+        
+        let params = ["Title": title, "Body": base64body]
         
         var paths = getDocumentsDirectory()
         //create filename
