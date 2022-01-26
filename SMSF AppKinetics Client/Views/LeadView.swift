@@ -11,6 +11,7 @@ struct LeadView: View {
     @State var firstName = ""
     @State var lastName = ""
     @State var email = ""
+    @State var company = ""
     @State var officephone = ""
     @State var cellphone = ""
     @State var url = ""
@@ -25,6 +26,7 @@ struct LeadView: View {
                 TextField("Email", text: $email)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
+                TextField("Company Name", text: $company)
                 TextField("Office Phone", text: $officephone)
                     .keyboardType(.phonePad)
                 TextField("Cell Phone", text: $cellphone)
@@ -41,7 +43,7 @@ struct LeadView: View {
                         let (message, isValid) = validateForm()
                         validationMessage = message
                         if isValid {
-                            let vcard = VCardContact(firstName: firstName, lastName: lastName,  email: email, phone: officephone, cell: cellphone, url: url)
+                            let vcard = VCardContact(firstName: firstName, lastName: lastName,   organization: company, email: email, phone: officephone, cell: cellphone, url: url)
                             let vcardstr = vcard.createVCardString()
                             let _ = AppKineticsController().importContact(vcard: vcardstr)
                         } else {
@@ -58,7 +60,7 @@ struct LeadView: View {
                         let (message, isValid) = validateForm()
                         validationMessage = message
                         if isValid {
-                            let vcard = VCardContact(firstName: firstName, lastName: lastName, email: email, phone: officephone, cell: cellphone, url: url)
+                            let vcard = VCardContact(firstName: firstName, lastName: lastName, organization: company, email: email, phone: officephone, cell: cellphone, url: url)
                             let vcardstr = vcard.createVCardString()
                             let _ = AppKineticsController().importContact(vcard: vcardstr)
                         } else {
@@ -69,7 +71,7 @@ struct LeadView: View {
             }
             
         }
-        .navigationTitle("Create Contact")
+        .navigationTitle("Create Lead")
     }
     
     func validateForm() -> (String, Bool) {
