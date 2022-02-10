@@ -1,9 +1,57 @@
 # SMSF AppKinetics Client
 
-Created from the BlackBerry Dynamics Sample App for iOS - Swift
+Based on the BlackBerry Dynamics Sample App for iOS - Swift
 
-This sample pairs with Basic-iOS-Swift as examples of iOS apps before and after integrating with the BlackBerry Dynamics SDK. The two samples demostrate features commonly used in the BlackBerry Dynamics applications; secure file storage, secure database, secure communication (HTTP/S and Socket) and more.
+This application is meant to be an example of how BlackBerry Dynamics app developers can make App Kenetics based calls into Swyft Mobile for Salesforce. 
 
+The four service calls into Swyft Mobile for Salesforce are as follows;
+
+* Service "com.swyftmobile.smsf.create-contact" with method "importFile"
+* Service "com.swyftmobile.smsf.create-document" with method "importFile"
+* Service "com.swyftmobile.smsf.create-note" with method "importFile"
+* Service "com.good.gdservice.save-edited-file" with method "saveEdit"
+
+Each service call into App Kinetics wdoes require an attachment to be passed.
+
+```swift
+        let kImportDocument = strConstants.kImportDocument
+        let kImportDocumentVersion = "1.0.0.0"
+        var requestId: NSString? = nil
+        
+        var boolResult = false
+        
+        let results = GDiOS.sharedInstance().getServiceProviders(for: kImportDocument,
+                                                                  andVersion: kImportDocumentVersion,
+                                                                  andServiceType: .application)
+        
+        guard let serviceProvider = results.first else {
+            return false
+        }
+
+        guard let serviceProviderAddress = serviceProvider.address else {
+            return false
+        }
+        
+        let wordfile = moveFileToDynamics(filename: filename)
+        let params = ["Filename": filename, "Mimetype": mimetype]
+        
+        do {
+            try GDServiceClient.send(to: serviceProviderAddress,
+                                                  withService: kImportDocument,
+                                                  withVersion: kImportDocumentVersion,
+                                                  withMethod: strConstants.kImportMethod,
+                                                  withParams: params,
+                                                  withAttachments: [wordfile],
+                                                  bringServiceToFront: .GDEPreferPeerInForeground,
+                                                  requestID: &requestId)
+            
+            boolResult = true
+            
+        } catch (let error) {
+            print("\(error.localizedDescription)")
+        }
+        return boolResult
+```
 
 ## Requirements
 
@@ -22,27 +70,7 @@ iOS 14 or later
 
 ## Author(s)
 
-* [EunKyung Choi](http://www.twitter.com/echotown)
-
-**Contributing**
-
-* To contribute code to this repository you must be signed up as an official contributor.
-
-
-## How To Build and Deploy
-
-1. Set up BlackBerry Dynamics environment
-2. Clone the repo to your computer.
-3. Run `pod install` to create project workspace.
-4. Launch Xcode and open the project.
-5. Edit Bundle ID to your own
-6. Edit URL identifier and URL Schemes in the info.plist.
-7. Edit GD Application ID to your own in the info.plist.
-8. Build, deploy and run on a testing device. 
-
-**Note:** Bitcode is disabled for the project
-
-For more information on how to develop BlackBerry Dynamics iOS apps, please visit [BlackBerry Developer Community](https://community.blackberry.com/community/gdn) 
+* [David Fekke](https://github.com/davidfekke)
 
 
 ## License

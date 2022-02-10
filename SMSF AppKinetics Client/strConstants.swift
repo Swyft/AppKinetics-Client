@@ -23,7 +23,6 @@ import Foundation
 public struct strConstants {
     static let kImportContact          = "com.swyftmobile.smsf.create-contact"
     static let kImportDocument         = "com.swyftmobile.smsf.create-document"
-    static let kTest                   = "com.swyftmobile.smsf.create-note"
     static let kImportNote             = "com.swyftmobile.smsf.create-note"
     static let kSaveEditedFileService  = "com.good.gdservice.save-edited-file"
     

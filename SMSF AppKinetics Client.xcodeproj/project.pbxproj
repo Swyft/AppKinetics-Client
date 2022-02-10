@@ -128,6 +128,7 @@
 				B2A5BBFC2788EA55009F8BDA /* Models */,
 				B2A5BBFB2788D8BE009F8BDA /* Views */,
 				6D72F99A26BB5154004CEDC6 /* AppDelegate.swift */,
+				B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */,
 				6DB97E4126B47E820029B91B /* Assets.xcassets */,
 				6D30985D26B9ACFD003DCFF2 /* DatabaseController.swift */,
 				6DB97E5426B49F590029B91B /* DatabaseView.swift */,
@@ -146,7 +147,6 @@
 				B2C341D82791CB8B005832C0 /* Airplane Usage Log.doc */,
 				B2C341DA2791CBD1005832C0 /* radio alt and 5g.pdf */,
 				B2C341C4278CB40C005832C0 /* PSI-Training-Signup-Instructions.docx */,
-				B2A5BBE22788B85E009F8BDA /* AppKineticsController.swift */,
 			);
 			path = "SMSF AppKinetics Client";
 			sourceTree = "<group>";
