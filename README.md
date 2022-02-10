@@ -14,43 +14,43 @@ The four service calls into Swyft Mobile for Salesforce are as follows;
 Each service call into App Kinetics wdoes require an attachment to be passed.
 
 ```swift
-        let kImportDocument = strConstants.kImportDocument
-        let kImportDocumentVersion = "1.0.0.0"
-        var requestId: NSString? = nil
-        
-        var boolResult = false
-        
-        let results = GDiOS.sharedInstance().getServiceProviders(for: kImportDocument,
-                                                                  andVersion: kImportDocumentVersion,
-                                                                  andServiceType: .application)
-        
-        guard let serviceProvider = results.first else {
-            return false
-        }
+let kImportDocument = strConstants.kImportDocument
+let kImportDocumentVersion = "1.0.0.0"
+var requestId: NSString? = nil
 
-        guard let serviceProviderAddress = serviceProvider.address else {
-            return false
-        }
-        
-        let wordfile = moveFileToDynamics(filename: filename)
-        let params = ["Filename": filename, "Mimetype": mimetype]
-        
-        do {
-            try GDServiceClient.send(to: serviceProviderAddress,
-                                                  withService: kImportDocument,
-                                                  withVersion: kImportDocumentVersion,
-                                                  withMethod: strConstants.kImportMethod,
-                                                  withParams: params,
-                                                  withAttachments: [wordfile],
-                                                  bringServiceToFront: .GDEPreferPeerInForeground,
-                                                  requestID: &requestId)
-            
-            boolResult = true
-            
-        } catch (let error) {
-            print("\(error.localizedDescription)")
-        }
-        return boolResult
+var boolResult = false
+
+let results = GDiOS.sharedInstance().getServiceProviders(for: kImportDocument,
+                                                          andVersion: kImportDocumentVersion,
+                                                          andServiceType: .application)
+
+guard let serviceProvider = results.first else {
+    return false
+}
+
+guard let serviceProviderAddress = serviceProvider.address else {
+    return false
+}
+
+let wordfile = moveFileToDynamics(filename: filename)
+let params = ["Filename": filename, "Mimetype": mimetype]
+
+do {
+    try GDServiceClient.send(to: serviceProviderAddress,
+                                          withService: kImportDocument,
+                                          withVersion: kImportDocumentVersion,
+                                          withMethod: strConstants.kImportMethod,
+                                          withParams: params,
+                                          withAttachments: [wordfile],
+                                          bringServiceToFront: .GDEPreferPeerInForeground,
+                                          requestID: &requestId)
+    
+    boolResult = true
+    
+} catch (let error) {
+    print("\(error.localizedDescription)")
+}
+print("Service call to App Kinetics completed: \(boolResult)")
 ```
 
 ## Requirements
