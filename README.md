@@ -2,7 +2,7 @@
 
 Based on the BlackBerry Dynamics Sample App for iOS - Swift
 
-This application is meant to be an example of how BlackBerry Dynamics app developers can make App Kenetics based calls into Swyft Mobile for Salesforce. 
+This application is meant to be an example of how BlackBerry Dynamics app developers can make App Kinetics based calls into Swyft Mobile for Salesforce. 
 
 The four service calls into Swyft Mobile for Salesforce are as follows;
 
